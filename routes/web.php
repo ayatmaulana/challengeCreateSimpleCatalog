@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'ProductController@index')->name('index');
+Route::get('/{category_id}', 'ProductController@showByCategory')->name('showByCategory');
+Route::get('/show/{id}', 'ProductController@show')->name('show');
